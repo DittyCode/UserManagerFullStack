@@ -4,6 +4,8 @@ import Welcome from './pages/Welcome/Welcome';
 import { useSelector } from 'react-redux';
 import { fetchUsers } from './store/users-slice';
 import { useDispatch } from 'react-redux';
+import Settings from './pages/Settings/Settings';
+import CreateUser from './pages/CreateUser/CreateUser';
 
 function App() {
 	const users = useSelector(state => state);
@@ -20,8 +22,8 @@ function App() {
 		<Routes>
 			<Route path='/' element={<Welcome />} />
 			<Route path='/:id' element={<h1>id!</h1>} />
-			<Route path='/create' element={<h1>Create user!</h1>} />
-			<Route path='/settings' element={<h1>Settings user!</h1>} />
+			<Route path='/create' element={<CreateUser />} />
+			<Route path='/settings' element={<Settings />} />
 		</Routes>
 	);
 }
