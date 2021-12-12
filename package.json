@@ -1,0 +1,30 @@
+{
+	"name": "randomprojects",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"mongoose": "^6.1.1",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.15"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"start-server:dev": "nodemon ./server.js --watch",
+		"start-server:prod": "set NODE_ENV=PRODUCTION && nodemon ./server.js--watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DittyCode/UserManagerFullStack.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/DittyCode/UserManagerFullStack/issues"
+	},
+	"homepage": "https://github.com/DittyCode/UserManagerFullStack#readme"
+}
