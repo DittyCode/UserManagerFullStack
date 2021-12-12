@@ -1,11 +1,11 @@
 exports.globalErrorHandler = (err, req, res, next) => {
-	const { statusCode, status, message } = err;
-	err.statusCode = statusCode || 500;
-	err.status = status || 'fail';
+	console.log(err);
+	const { statusCode = 500, status = 'fail', message } = err;
 
-	res.status(200).send({
+	res.status(statusCode).send({
 		status,
 		statusCode,
 		message,
 	});
+	next();
 };
