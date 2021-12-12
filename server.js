@@ -1,15 +1,19 @@
 require('dotenv').config({ path: './config/config.env' });
 const express = require('express');
 const db = require('./db/connect');
+const morgan = require('morgan');
 const cors = require('cors');
+const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
 app.use(cors());
 
-app.get('/api', (req, res) => {
-	res.send({ message: 'Full Stack!' });
-});
+app.use('/api/v1/users', userRouter);
+
+if (process.env.NODE_ENV === 'DEVELOPMENT') {
+	app.use(morgan('dev'));
+}
 
 const PORT = process.env.SERVER_PORT || 3000;
 

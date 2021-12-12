@@ -11,7 +11,9 @@
 		"morgan": "^1.10.0",
 		"nodemon": "^2.0.15"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"express-async-handler": "^1.2.0"
+	},
 	"scripts": {
 		"start-server:dev": "nodemon ./server.js --watch",
 		"start-server:prod": "set NODE_ENV=PRODUCTION && nodemon ./server.js--watch"
