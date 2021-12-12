@@ -1,0 +1,15 @@
+.nav {
+	height: 100px;
+	&__list {
+		@include flex-mother();
+		justify-content: space-around;
+		height: inherit;
+		list-style-type: none;
+	}
+	&__item {
+		font-size: clamp(1.2rem, 3vh, 3rem);
+		text-decoration: none;
+		color: white;
+	}
+	background-color: black;
+}

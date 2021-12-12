@@ -1,6 +1,9 @@
 @import './abstracts/variables';
 @import './abstracts/mixins';
 @import './base/reset';
+@import './components/root';
+@import './components/navbar';
+
 body {
 	background-color: red;
 }
